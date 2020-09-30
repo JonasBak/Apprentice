@@ -2,7 +2,7 @@
 " Author:      Romain Lafourcade (romainlafourcade@gmail.com)
 " Webpage:     https://github.com/romainl/Apprentice
 " Description: Essentially a streamlining and conversion to xterm colors of 'sorcerer' by Jeet Sukumaran (jeetsukumaran@gmailcom)
-" Last Change: 2020-05-26
+" Last Change: 2020-09-30
 
 hi clear
 if exists("syntax_on")
@@ -15,11 +15,11 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Normal ctermbg=235 ctermfg=250 cterm=NONE guibg=#262626 guifg=#bcbcbc gui=NONE
     hi NonText ctermbg=NONE ctermfg=240 cterm=NONE guibg=NONE guifg=#585858 gui=NONE
     hi EndOfBuffer ctermbg=NONE ctermfg=240 cterm=NONE guibg=NONE guifg=#585858 gui=NONE
-    hi LineNr ctermbg=234 ctermfg=242 cterm=NONE guibg=#1c1c1c guifg=#6c6c6c gui=NONE
+    hi LineNr ctermbg=235 ctermfg=242 cterm=NONE guibg=#262626 guifg=#6c6c6c gui=NONE
     hi FoldColumn ctermbg=234 ctermfg=242 cterm=NONE guibg=#1c1c1c guifg=#6c6c6c gui=NONE
     hi Folded ctermbg=234 ctermfg=242 cterm=NONE guibg=#1c1c1c guifg=#6c6c6c gui=NONE
     hi MatchParen ctermbg=234 ctermfg=229 cterm=NONE guibg=#1c1c1c guifg=#ffffaf gui=NONE
-    hi SignColumn ctermbg=234 ctermfg=242 cterm=NONE guibg=#1c1c1c guifg=#6c6c6c gui=NONE
+    hi SignColumn ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
     hi Comment ctermbg=NONE ctermfg=240 cterm=NONE guibg=NONE guifg=#585858 gui=NONE
     hi Conceal ctermbg=NONE ctermfg=250 cterm=NONE guibg=NONE guifg=#bcbcbc gui=NONE
     hi Constant ctermbg=NONE ctermfg=208 cterm=NONE guibg=NONE guifg=#ff8700 gui=NONE
@@ -42,9 +42,9 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi MoreMsg ctermbg=NONE ctermfg=66 cterm=NONE guibg=NONE guifg=#5f8787 gui=NONE
     hi Question ctermbg=NONE ctermfg=108 cterm=NONE guibg=NONE guifg=#87af87 gui=NONE
     hi WarningMsg ctermbg=NONE ctermfg=131 cterm=NONE guibg=NONE guifg=#af5f5f gui=NONE
-    hi TabLine ctermbg=238 ctermfg=101 cterm=NONE guibg=#444444 guifg=#87875f gui=NONE
-    hi TabLineFill ctermbg=238 ctermfg=238 cterm=NONE guibg=#444444 guifg=#444444 gui=NONE
-    hi TabLineSel ctermbg=101 ctermfg=235 cterm=NONE guibg=#87875f guifg=#262626 gui=NONE
+    hi TabLine ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
+    hi TabLineFill ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
+    hi TabLineSel ctermbg=NONE ctermfg=250 cterm=NONE guibg=NONE guifg=#bcbcbc gui=NONE
     hi ToolbarLine ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1c1c1c guifg=NONE gui=NONE
     hi ToolbarButton ctermbg=240 ctermfg=250 cterm=NONE guibg=#585858 guifg=#bcbcbc gui=NONE
     hi Cursor ctermbg=242 ctermfg=NONE cterm=NONE guibg=#6c6c6c guifg=NONE gui=NONE
@@ -53,17 +53,17 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi CursorLine ctermbg=236 ctermfg=NONE cterm=NONE guibg=#303030 guifg=NONE gui=NONE
     hi helpLeadBlank ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi helpNormal ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
-    hi StatusLine ctermbg=101 ctermfg=235 cterm=NONE guibg=#87875f guifg=#262626 gui=NONE
-    hi StatusLineNC ctermbg=238 ctermfg=101 cterm=NONE guibg=#444444 guifg=#87875f gui=NONE
-    hi StatusLineTerm ctermbg=101 ctermfg=235 cterm=NONE guibg=#87875f guifg=#262626 gui=NONE
-    hi StatusLineTermNC ctermbg=238 ctermfg=101 cterm=NONE guibg=#444444 guifg=#87875f gui=NONE
+    hi StatusLine ctermbg=NONE ctermfg=253 cterm=NONE guibg=NONE guifg=#ffffff gui=NONE
+    hi StatusLineNC ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
+    hi StatusLineTerm ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
+    hi StatusLineTermNC ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
     hi Visual ctermbg=235 ctermfg=110 cterm=reverse guibg=#262626 guifg=#8fafd7 gui=reverse
     hi VisualNOS ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline
-    hi VertSplit ctermbg=238 ctermfg=238 cterm=NONE guibg=#444444 guifg=#444444 gui=NONE
+    hi VertSplit ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
     hi WildMenu ctermbg=110 ctermfg=235 cterm=NONE guibg=#8fafd7 guifg=#262626 gui=NONE
     hi Function ctermbg=NONE ctermfg=229 cterm=NONE guibg=NONE guifg=#ffffaf gui=NONE
     hi SpecialKey ctermbg=NONE ctermfg=240 cterm=NONE guibg=NONE guifg=#585858 gui=NONE
-    hi Title ctermbg=NONE ctermfg=231 cterm=NONE guibg=NONE guifg=#ffffff gui=NONE
+    hi Title ctermbg=NONE ctermfg=253 cterm=NONE guibg=NONE guifg=#ffffff gui=NONE
     hi DiffAdd ctermbg=235 ctermfg=108 cterm=reverse guibg=#262626 guifg=#87af87 gui=reverse
     hi DiffChange ctermbg=235 ctermfg=103 cterm=reverse guibg=#262626 guifg=#8787af gui=reverse
     hi DiffDelete ctermbg=235 ctermfg=131 cterm=reverse guibg=#262626 guifg=#af5f5f gui=reverse
@@ -89,7 +89,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi FoldColumn ctermbg=black ctermfg=lightgrey cterm=NONE
     hi Folded ctermbg=black ctermfg=lightgrey cterm=NONE
     hi MatchParen ctermbg=black ctermfg=yellow cterm=NONE
-    hi SignColumn ctermbg=black ctermfg=lightgrey cterm=NONE
+    hi SignColumn ctermbg=NONE ctermfg=lightgrey cterm=NONE
     hi Comment ctermbg=NONE ctermfg=darkgrey cterm=NONE
     hi Conceal ctermbg=NONE ctermfg=lightgrey cterm=NONE
     hi Constant ctermbg=NONE ctermfg=red cterm=NONE
@@ -112,9 +112,9 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi MoreMsg ctermbg=NONE ctermfg=darkcyan cterm=NONE
     hi Question ctermbg=NONE ctermfg=green cterm=NONE
     hi WarningMsg ctermbg=NONE ctermfg=darkred cterm=NONE
-    hi TabLine ctermbg=darkgrey ctermfg=darkyellow cterm=NONE
-    hi TabLineFill ctermbg=darkgrey ctermfg=darkgrey cterm=NONE
-    hi TabLineSel ctermbg=darkyellow ctermfg=black cterm=NONE
+    hi TabLine ctermbg=NONE ctermfg=lightgrey cterm=NONE
+    hi TabLineFill ctermbg=NONE ctermfg=lightgrey cterm=NONE
+    hi TabLineSel ctermbg=NONE ctermfg=lightgrey cterm=NONE
     hi ToolbarLine ctermbg=black ctermfg=NONE cterm=NONE
     hi ToolbarButton ctermbg=darkgrey ctermfg=lightgrey cterm=NONE
     hi Cursor ctermbg=lightgrey ctermfg=NONE cterm=NONE
@@ -123,13 +123,13 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi CursorLine ctermbg=darkgrey ctermfg=NONE cterm=NONE
     hi helpLeadBlank ctermbg=NONE ctermfg=NONE cterm=NONE
     hi helpNormal ctermbg=NONE ctermfg=NONE cterm=NONE
-    hi StatusLine ctermbg=darkyellow ctermfg=black cterm=NONE
-    hi StatusLineNC ctermbg=darkgrey ctermfg=darkyellow cterm=NONE
-    hi StatusLineTerm ctermbg=darkyellow ctermfg=black cterm=NONE
-    hi StatusLineTermNC ctermbg=darkgrey ctermfg=darkyellow cterm=NONE
+    hi StatusLine ctermbg=NONE ctermfg=white cterm=NONE
+    hi StatusLineNC ctermbg=NONE ctermfg=lightgrey cterm=NONE
+    hi StatusLineTerm ctermbg=NONE ctermfg=lightgrey cterm=NONE
+    hi StatusLineTermNC ctermbg=NONE ctermfg=lightgrey cterm=NONE
     hi Visual ctermbg=black ctermfg=blue cterm=reverse
     hi VisualNOS ctermbg=NONE ctermfg=NONE cterm=underline
-    hi VertSplit ctermbg=darkgrey ctermfg=darkgrey cterm=NONE
+    hi VertSplit ctermbg=NONE ctermfg=black cterm=NONE
     hi WildMenu ctermbg=blue ctermfg=black cterm=NONE
     hi Function ctermbg=NONE ctermfg=yellow cterm=NONE
     hi SpecialKey ctermbg=NONE ctermfg=darkgrey cterm=NONE
